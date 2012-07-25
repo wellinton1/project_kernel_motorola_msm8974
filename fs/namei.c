@@ -2474,9 +2474,10 @@ retry_lookup:
 	}
 
 	/*
-	 * It already exists.
+	 * create/update audit record if it already exists.
 	 */
-	audit_inode(pathname, path->dentry);
+	if (path->dentry->d_inode)
+		audit_inode(pathname, path->dentry);
 
 	error = -EEXIST;
 	if (open_flag & O_EXCL)
