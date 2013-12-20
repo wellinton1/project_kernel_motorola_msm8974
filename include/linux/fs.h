@@ -1678,6 +1678,7 @@ struct inode_operations {
 	int (*update_time)(struct inode *, struct timespec *, int);
 	struct file *(*open) (struct dentry *, struct file *,
 			      const struct cred *);
+	int (*set_acl)(struct inode *, struct posix_acl *, int);
 } ____cacheline_aligned;
 
 struct seq_file;
