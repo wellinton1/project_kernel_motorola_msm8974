@@ -2,7 +2,6 @@ ccflags-y += -I$(src)			# needed for trace events
 
 obj-y					+= ion/
 
->>>>>>> f7a218c023c... BACKPORT: staging: android: binder: move to the real part of the kernel
 obj-$(CONFIG_ASHMEM)			+= ashmem.o
 obj-$(CONFIG_ANDROID_LOGGER)		+= logger.o
 obj-$(CONFIG_ANDROID_PERSISTENT_RAM)	+= persistent_ram.o
